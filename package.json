@@ -3,6 +3,7 @@
     "start": "node index.js"
   },
   "name": "week6",
+  "type": "module",
   "version": "1.0.2",
   "engines": {
     "node": "14.8.0"
