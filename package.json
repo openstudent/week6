@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "start": "node index.js"
+  },
+  "name": "week6",
+  "version": "1.0.2",
+  "engines": {
+    "node": "14.8.0"
+  },
+  "main": "s.mjs",
+  "repository": "https://github.com/openstudent/week6.git",
+  "author": "GossJS",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
