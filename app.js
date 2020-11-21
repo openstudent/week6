@@ -36,5 +36,7 @@ export default (express, bodyParser, createReadStream, crypto, http) => {
         });
       });
   
+      app.all('/*', r.res.send('Работает!'));
+    
       return app;
 };
