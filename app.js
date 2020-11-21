@@ -1,4 +1,4 @@
-export default (express, bodyParser, fs, crypto, http) => {
+export default (express, bodyParser, createReadStream, crypto, http) => {
     const app = express();
     const CORS = {
       "Access-Control-Allow-Origin": "*",
@@ -23,7 +23,7 @@ export default (express, bodyParser, fs, crypto, http) => {
   
       .get('/code/', (req, res) => {
         res.set({'Content-Type': 'text/plain; charset=utf-8'});
-        fs.createReadStream(import.meta.url.substring(7)).pipe(res);
+        createReadStream(import.meta.url.substring(7)).pipe(res);
       })
   
       app.all('/req/', (req, res) => {
