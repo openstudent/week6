@@ -32,11 +32,11 @@ export default (express, bodyParser, createReadStream, crypto, http) => {
         http.get(addr, (r, b = '') => {
             r
             .on('data', d => b += d)
-            .on('end', () => r => r.res.send(b));
+            .on('end', () => r.res.send(b));
         });
       });
   
-      app.all('/*', r.res.send('Работает!'));
+      app.all('/*', r => r.res.send('Работает!'));
     
       return app;
 };
