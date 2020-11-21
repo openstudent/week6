@@ -32,7 +32,7 @@ export default (express, bodyParser, createReadStream, crypto, http) => {
         http.get(addr, (r, b = '') => {
             r
             .on('data', d => b += d)
-            .on('end', () => res.send(b));
+            .on('end', () => r => r.res.send(b));
         });
       });
   
